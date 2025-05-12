@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+
+header { 
+  padding-top: auto;
+  background-color: #dfc7d1;
+  }
+.wave {
+    display: block;
+    margin-top: -1px; /* 段差の解消 */
+  }
+  
+  
+body {
+    position: relative;
+    background-image: url('/Users/yoshioka/Downloads/haikei2.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    margin: 0;
+  padding: 0;
+  }
+  /* 白いベールをかける */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* 0.6は白の透明度 */
+    z-index: -1;
+}
+  
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; 
+    padding-top: 16px; 
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ロゴ */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+  
+  .logo-icon {
+    width: 80px;
+    height: auto;
+  }
+  
+  .logo-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #5e3c8f;
+    font-family: 'Zapfino', sans-serif;
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    font-size: 0.5em; /* 小さく調整 */
+    display: block;
+    color: #5e3c8f;
+  }
+  
+  .nav-links {
+    display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;        /* ← これも大事！ */
+  }
+  
+  .nav-links li {
+    flex-shrink: 0;
+  }
+  
+  .nav-links a {
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    color:#8c178c; 
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 14px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", serif;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #8c178c;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }/* ここまでがヘッダー*/
+
+
+  .decorated-title {
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+  }
+
+.decoration-bottom {
+  width: 300px; /* 必要に応じてサイズ調整 */
+  opacity: 0.7;
+  display: block;
+  margin: 0 auto; /* 中央寄せ */
+}
+
+.decoration-top {
+  margin-bottom: -40px; /* ← ここ！空白を詰めます */
+}
+
+h2 {
+  font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", serif;
+  font-size: 2rem;
+  margin: 0; /* h2の上下のマージンを消してみる */
+  padding: 10px 0;
+  text-align: center;  /* 文章を中央揃え */
+    margin-left: auto;   /* 左のインデントを調整 */
+    margin-right: auto;  /* 右のインデントを調整 */
+    padding-left: 20px;  /* 左側にインデント */
+    padding-right: 20px; /* 右側にインデント */
+    max-width: 800px;  /* 必要ならちょっとだけ余白を足す */
+}
+
+h3{
+  font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", serif;
+font-size: 2rem;
+margin: 0; /* h2の上下のマージンを消してみる */
+padding: 10px 0; 
+text-align: center;  /* 文章を中央揃え */
+    margin-left: auto;   /* 左のインデントを調整 */
+    margin-right: auto;  /* 右のインデントを調整 */
+    padding-left: 20px;  /* 左側にインデント */
+    padding-right: 20px; /* 右側にインデント */
+    max-width: 800px; 
+}
+.container2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;  /* 文章を中央揃え */
+    margin-left: auto;   /* 左のインデントを調整 */
+    margin-right: auto;  /* 右のインデントを調整 */
+    padding-left: 20px;  /* 左側にインデント */
+    padding-right: 20px; /* 右側にインデント */
+    max-width: 800px; 
+    font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", serif;
+}
+
+/* ギャラリーのスタイル */
+/* ギャラリーのセクション全体 */
+.gallery-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: transparent;
+}
+
+/* ギャラリー内のアイテム */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列レイアウトに変更 */
+  gap: 20px; /* アイテム間の隙間 */
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* ギャラリーアイテム */
+.gallery-item {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* 幅を固定 */
+  background-color: rgba(246, 239, 249, 0.5);
+  border: 2.5px solid #a28700;
+  border-radius: 12px; /* 角を丸める */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ソフトなシャドウ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* スムーズなアニメーション */
+  overflow: hidden; /* 画像がカードからはみ出さないように */
+}
+/* ギャラリーアイテムの画像 */
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* 固定の高さに設定 */
+  object-fit: cover; /* 画像が縮小されて表示されるように */
+  border-radius: 12px 12px 0 0; /* 上部だけ角丸に */
+  transition: transform 0.3s ease; /* ホバー時のズームインアニメーション */
+}
+
+/* ホバー時のアニメーション */
+.gallery-item:hover {
+  transform: translateY(-10px); /* 上に浮き上がる */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* シャドウ強調 */
+}
+
+/* キャプション */
+.caption {
+  padding: 15px;
+  font-size: 1.1em;
+  color: #340634;
+  font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", serif;
+  text-align: center;
+}
+
+/* ギャラリーのアニメーション */
+.fade-in-left.active, .fade-in-right.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* レスポンシブデザイン - スマホ向け */
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1列に変更 */
+  }
+  .gallery-item img {
+    height: 200px; /* 小さなデバイス向けに高さを調整 */
+  }
+}
+
+
+
+/* ここまでがメイン*/
+.footer {
+  background-color: #dfc7d1; /* 薄いラベンダー系ホワイト */
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #8c178c;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color:#8c178c;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #000000; /* ホバー時に少し淡い紫へ */
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #999;
+}

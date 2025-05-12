@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graziaについて | Grazia ピアノ教室</title>
+  <link rel="stylesheet" href="/Users/yoshioka/Desktop/Grazia.web/css/teacher.css">
+  <!-- ここにフォントやアイコンCDNなどあれば追加 -->
+</head>
+<body>
+  <!-- ▼ ヘッダー（共通） -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="/Users/yoshioka/Downloads/pianoooo.png" alt="グランドピアノロゴ" class="logo-icon">
+        <div class="logo-text">
+          Grazia<br><span class="subtitle">Music School</span>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/Users/yoshioka/Desktop/Grazia.web/index.html">Graziaについて</a></li>
+        <li><a href="instructor.html">講師紹介</a></li>
+        <li><a href="pricing.html">レッスン料金について</a></li>
+        <li><a href="access.html">アクセス情報</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+       
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path fill="#dfc7d1" d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z"></path>
+  </svg>
+  
+
+  <!-- ▼ メインコンテンツ -->
+  <main class="teacher">
+
+    <div class="decorated-title">
+        <h2>講師紹介</h2>
+        <img src="/Users/yoshioka/Downloads/bsbos.png" alt="飾り下" class="decoration-bottom">
+      </div>
+      
+    <section class="teachers">
+        <div class="teacher-cards">
+          <div class="teacher-card">
+            <img src="/Users/yoshioka/Downloads/Grazia6.jpg" alt="先生1" class="teacher-photo" />
+            <h3>吉岡　ゆう子</h3>
+            <p>Grazia　代表</p>
+            <p>初心者にも優しく丁寧な指導がモットーです。</p>
+          </div>
+          <div class="teacher-card">
+            <img src="/Users/yoshioka/Downloads/Creative Chatting App Logo.png" alt="先生2" class="teacher-photo" />
+            <h3>田中 美咲</h3>
+            <p>ヨーロッパでの演奏経験を活かし、表現力を大切にしたレッスンを行います。</p>
+          </div>
+          <div class="teacher-card">
+            <img src="/Users/yoshioka/Downloads/Creative Chatting App Logo.png" alt="先生3" class="teacher-photo" />
+            <h3>佐藤 奈々</h3>
+            <p>小さなお子さまにも寄り添った楽しいレッスンが好評です。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="closing-message">
+        <p>
+          4歳からシニアの方まで、経験豊かな講師陣で優しく丁寧に指導しております。<br>
+          どうぞご安心してレッスンをご受講ください。
+        </p>
+      </div>
+      
+      
+  </main>
+
+  <!-- ▼ フッター（共通） -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">Grazia ピアノ教室</div>
+      <ul class="footer-nav">
+        <li><a href="/Users/yoshioka/Desktop/Grazia.web/index.html">Graziaについて</a></li>
+        <li><a href="instructor.html">講師紹介</a></li>
+        <li><a href="pricing.html">レッスン料金について</a></li>
+        <li><a href="access.html">アクセス情報</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        
+      </ul>
+      <p class="footer-copy">&copy; 2025 Grazia Piano School. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".teacher-card");
+  
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, {
+        threshold: 0.1,
+      });
+  
+      cards.forEach(card => observer.observe(card));
+    });
+  </script>
+  
+</body>
+</html>
+  

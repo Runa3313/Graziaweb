@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+
+header { 
+  padding-top: auto;
+  background-color: #dfc7d1;
+  }
+.wave {
+    display: block;
+    margin-top: -1px; /* 段差の解消 */
+  }
+  
+  
+    
+  body {
+      position: relative;
+      background-image: url('/Users/yoshioka/Downloads/haikei2.jpg');
+      background-repeat: repeat;
+      background-size: auto;
+      background-attachment: fixed;
+      margin: 0;
+    padding: 0;
+    }
+  
+  /* 白いベールをかける */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);  /* 0.6は白の透明度 */
+    z-index: -1;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; 
+    padding-top: 16px; 
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ロゴ */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+  
+  .logo-icon {
+    width: 80px;
+    height: auto;
+  }
+  
+  .logo-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #5e3c8f;
+    font-family: 'Zapfino', sans-serif;
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    font-size: 0.5em; /* 小さく調整 */
+    display: block;
+    color: #5e3c8f;
+  }
+.nav-links {
+    display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;        /* ← これも大事！ */
+  }
+
+.nav-links li {
+    flex-shrink: 0;
+  }
+  
+.nav-links a {
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    color:#8c178c; 
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 14px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", serif;
+  }
+  
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #8c178c;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }/* ここまでがヘッダー*/
+  
+  /* CSSの例（style.cssなど） */
+.decorated-title {
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+  }
+
+.decoration-bottom {
+  width: 300px; /* 必要に応じてサイズ調整 */
+  opacity: 0.7;
+  display: block;
+  margin: 0 auto; /* 中央寄せ */
+}
+
+.decoration-top {
+  margin-bottom: -40px; /* ← ここ！空白を詰めます */
+}
+
+h2 {
+  font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", serif;
+  font-size: 2rem;
+  margin: 0; /* h2の上下のマージンを消してみる */
+  padding: 10px 0; /* 必要ならちょっとだけ余白を足す */
+}
+
+h5{
+  width: 300px; /* 必要に応じてサイズ調整 */
+  opacity: 0.7;
+  display: block;
+  margin: 0 auto;
+}
+
+p{
+  width: 300px; /* 必要に応じてサイズ調整 */
+  opacity: 0.7;
+  display: block;
+  margin: 0 auto;
+}
+
+#rss-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+#rss-list li {
+  margin-bottom: 1em;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5em;
+}
+
+#rss-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+#rss-list .date {
+  display: block;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.footer {
+  background-color: #dfc7d1; /* 薄いラベンダー系ホワイト */
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #8c178c;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color:#8c178c;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #000000; /* ホバー時に少し淡い紫へ */
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #999;
+}

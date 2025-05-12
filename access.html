@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アクセス・教室情報 | Graziaピアノ教室</title>
+  <link rel="stylesheet" href="/Users/yoshioka/Desktop/Grazia.web/css/access.css">
+  <!-- ここにフォントやアイコンCDNなどあれば追加 -->
+</head>
+
+<body>
+  <!-- ▼ ヘッダー（共通） -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="/Users/yoshioka/Downloads/pianoooo.png" alt="グランドピアノロゴ" class="logo-icon">
+        <div class="logo-text">
+          Grazia<br><span class="subtitle">Music School</span>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/Users/yoshioka/Desktop/Grazia.web/index.html">Graziaについて</a></li>
+        <li><a href="instructor.html">講師紹介</a></li>
+        <li><a href="pricing.html">レッスン料金について</a></li>
+        <li><a href="access.html">アクセス情報</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path fill="#dfc7d1" d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z"></path>
+  </svg>
+  
+
+  <div class="decorated-title">
+    <h2>アクセス・教室情報</h2>
+    <img src="/Users/yoshioka/Downloads/bsbos.png" alt="飾り下" class="decoration-bottom">
+</div>
+
+  <section class="access-info">
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.5522988103726!2d139.92038947557825!3d36.54079398227983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f5deec38ba197%3A0xfef7c1a0be4c853a!2z5pel5pys44CB44CSMzIxLTA5NDQg5qCD5pyo55yM5a6H6YO95a6u5biC5p2x5bOw55S677yT77yR77yQ77yR4oiS77yR77yR77yR!5e0!3m2!1sja!2sus!4v1745696401112!5m2!1sja!2sus"
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  
+    <!-- 教室情報 -->
+    <div class="info-block">
+      <div class="info-item">
+        <h3>教室名</h3>
+        <p>グラツィアピアノ教室</p>
+      </div>
+      <div class="info-item">
+        <h3>住所</h3>
+        <p>〒321-0944 栃木県宇都宮市東峰町３１０１−１１１</p>
+      </div>
+      <div class="info-item">
+        <h3>最寄り駅</h3>
+        <p>JR宇都宮駅より徒歩20分</p>
+        <p>宇都宮大学峰キャンパスより徒歩10分</p>
+      </div>
+      <div class="info-item">
+        <h3>レッスン時間</h3>
+        <p>平日 14:00〜20:00／土曜 10:00〜17:00</p>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">Grazia ピアノ教室</div>
+      <ul class="footer-nav">
+        <li><a href="/Users/yoshioka/Desktop/Grazia.web/index.html">Graziaについて</a></li>
+        <li><a href="instructor.html">講師紹介</a></li>
+        <li><a href="pricing.html">レッスン料金について</a></li>
+        <li><a href="access.html">アクセス情報</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2025 Grazia Piano School. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // アニメーション
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      appearOnScroll.observe(el);
+    });
+  </script>
+
+
+</body>
+</html>
