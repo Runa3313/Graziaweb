@@ -14,7 +14,7 @@ header {
     
 body {
       position: relative;
-      background-image: url('/Users/yoshioka/Downloads/haikei2.jpg');
+      background-image: url('haikei2.jpg');
       background-repeat: repeat;
       background-size: auto;
       background-attachment: fixed;
