@@ -166,6 +166,7 @@ p{
     width: 260px;
     padding: 20px;
     background-color: #faefef;
+    border: 3px solid #9c7d27;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transition: transform 0.3s;
@@ -173,6 +174,7 @@ p{
   
   .teacher-card:hover {
     transform: translateY(-5px);
+    border: 3px solid #9c7d27;
   }
   
   .teacher-photo {
