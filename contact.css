@@ -8,11 +8,7 @@ header {
     display: block;
     margin-top: -1px; /* 段差の解消 */
   }
-  
-  
-  
-    
-  body {
+body {
       position: relative;
       background-image: url('haikei2.jpg');
       background-repeat: repeat;
